@@ -1,4 +1,4 @@
-/*p {
+p {
 color: lightblue;
 background-color: light blue;
 border: 1px solid black;
@@ -8,15 +8,15 @@ font-family: “Times”;
 }
 
 img {
-width: 20px;
-height: 20px;
+width: 500px;
+height: 500px;
 border: 2px solid maroon;
 }
 
 li {
 color: lightblue;
 background-color: light blue;
-border: 1px solid black;
+border: 500 solid black;
 font-size: 12px;
 font-weight: normal;
 font-family: “Times”; 
@@ -26,7 +26,5 @@ a {
 font-size: 12px;
 color: blue;
 } 
-*/
-p {
-  color: blue;
-}
+
+
