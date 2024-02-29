@@ -4,3 +4,7 @@ text-align: center;
 html {
   background-color: lightblue;
 }
+img {
+  width: 1000px;
+  height: 1000px
+}
