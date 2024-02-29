@@ -10,8 +10,7 @@ html {
 img {
   width: 650px;
   height: 400px;
-   display: flex;
-    justify-content: center;
+   
 }
 nav {
   display: flex;
