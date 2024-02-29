@@ -13,7 +13,8 @@ img {
   text-align: center;
 }
 nav {
-  display: inline;
+  display: flex;
+  flex-direction: row;
 }
 a {
   font-size: 30px;
