@@ -12,9 +12,8 @@ img {
   height: 400px;
    
 }
-nav {
-  display: flex;
-  flex-direction: row;
+navigation {
+  display: inline
 }
 a {
   font-size: 30px;
