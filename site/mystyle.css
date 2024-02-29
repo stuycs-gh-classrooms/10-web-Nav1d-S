@@ -1,6 +1,8 @@
 h1, h2 { 
 text-align: center;
   border: 3px solid gray;
+  border-right-width: 5px;
+  border-left-width: 5px;
 }
 html {
   background-color: lightblue;
