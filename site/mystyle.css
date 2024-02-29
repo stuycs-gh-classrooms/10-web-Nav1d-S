@@ -1,3 +1,6 @@
 h1, image { 
 display: inline;
 }
+html {
+  background-color: lightblue;
+}
