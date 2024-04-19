@@ -53,6 +53,27 @@
   <p>The new rendition of the Sierpinski Triangle fractal changes two aspects of the code that randomise much of it. The first aspect changes the color by choosing out of 4 using random.randrange, which gives each new triangle a different color. The second aspect that is changed is the selection of size, using random.randrange it chose a number between 50 and 250, resulting in many different sized triangles. </p>
  <p>sierpinski(michelangelo, 5, 'size')</p>
    <img src="https://github.com/stuycs-gh-classrooms/10-web-Nav1d-S/blob/main/fractal%20images/my%20sierpinski.png?raw=true">
+   <p>def sierpinski(t, depth, size, scale_factor=1):</p>
+    <p>color = random.randrange(4)</p>
+    colors = ['red', 'orange', 'green', 'blue']
+    t.color(colors[color])
+    random_size = random.randrange(50, 250)
+    size = random_size
+    
+    if depth == 1:
+        triangle(t, size)
+    else:
+        sierpinski(t, depth-1, size/2)
+        t.fd(size/2)
+        sierpinski(t, depth-1, size/2)
+        t.bk(size/2)
+        t.lt(60)
+        t.fd(size/2)
+        t.rt(60)
+        sierpinski(t, depth-1, size/2)
+        t.rt(120)
+        t.fd(size/2)
+        t.lt(120)</p>
 
    <h1>Trees</h1>
    <p>This image represents a nomral Tree fractal, with a depth of 4, size of 50, and angle of 20.</p>
