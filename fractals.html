@@ -55,25 +55,25 @@
    <img src="https://github.com/stuycs-gh-classrooms/10-web-Nav1d-S/blob/main/fractal%20images/my%20sierpinski.png?raw=true">
    <p>def sierpinski(t, depth, size, scale_factor=1):</p>
     <p>color = random.randrange(4)</p>
-    colors = ['red', 'orange', 'green', 'blue']
-    t.color(colors[color])
-    random_size = random.randrange(50, 250)
-    size = random_size
+    <p>colors = ['red', 'orange', 'green', 'blue']</p>
+    <p>t.color(colors[color])</p>
+    <p>random_size = random.randrange(50, 250)</p>
+    <p>size = random_size</p>
     
-    if depth == 1:
-        triangle(t, size)
-    else:
-        sierpinski(t, depth-1, size/2)
-        t.fd(size/2)
-        sierpinski(t, depth-1, size/2)
-        t.bk(size/2)
-        t.lt(60)
-        t.fd(size/2)
-        t.rt(60)
-        sierpinski(t, depth-1, size/2)
-        t.rt(120)
-        t.fd(size/2)
-        t.lt(120)</p>
+    <p>if depth == 1:</p>
+        <p>triangle(t, size)</p>
+    <p>else:</p>
+        <p>sierpinski(t, depth-1, size/2)</p>
+        <p>t.fd(size/2)</p>
+        <p>sierpinski(t, depth-1, size/2)</p>
+        <p>t.bk(size/2)</p>
+        <p>t.lt(60)</p>
+        <p>t.fd(size/2)</p>
+        <p>t.rt(60)</p>
+        <p>sierpinski(t, depth-1, size/2)</p>
+        <p>t.rt(120)</p>
+        <p>t.fd(size/2)</p>
+        <p>t.lt(120)</p>
 
    <h1>Trees</h1>
    <p>This image represents a nomral Tree fractal, with a depth of 4, size of 50, and angle of 20.</p>
