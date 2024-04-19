@@ -13,3 +13,33 @@
       <img src="https://github.com/stuycs-gh-classrooms/10-web-Nav1d-S/blob/main/fractal%20images/Koch%20Curve.PNG?raw=true">
    <p>This is a new rendition of the Koch Curve, it does two things. The first thing it does is alternate between the colors red and blue at random with a 50% chance of either. The second thing it does is choose the angle measure as 60 degrees, or it chooses a random angle measure between 60 and 120, with a 50% chance of each occuring. The final change had been adding to the code for the turtle to go backwards and then turn negative angles instaed of positive ones. </p>
       <img src="https://github.com/stuycs-gh-classrooms/10-web-Nav1d-S/blob/main/fractal%20images/My%20Koch%20Curve.png?raw=true">
+   <p>def draw_koch(t, depth, length):
+    t.pd()
+    chance = random.randrange(2)
+    if depth == 1:
+        t.forward(length)
+        if chance != 1:
+            t.color('red')
+        else:
+            t.color('blue')
+    else:
+        if chance != 2:
+            angle = random.randrange(60, 120)
+        else:
+            angle = 60
+        draw_koch(t, depth - 1, length / 3)
+        t.lt(angle)
+        draw_koch(t, depth - 1, length / 3)
+        t.rt(120)
+        draw_koch(t, depth - 1, length / 3)
+        t.lt(angle)
+        draw_koch(t, depth - 1, length / 3)
+        t.bk(length)
+        draw_koch(t, depth - 1, length / 3)
+        t.lt(-angle)
+        draw_koch(t, depth - 1, length / 3)
+        t.rt(-120)
+        draw_koch(t, depth - 1, length / 3)
+        t.lt(-angle)
+        draw_koch(t, depth - 1, length / 3)
+</p>
