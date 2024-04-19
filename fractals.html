@@ -83,24 +83,24 @@
    <p>tree(leonardo, 4, 'size', 'angle')</p>
    <img src="https://github.com/stuycs-gh-classrooms/10-web-Nav1d-S/blob/main/fractal%20images/my%20tree.png?raw=true">
   
-   <p>def tree(t, depth, size, angle):
-    variable_size = random.randrange(50, 100)
-    size = variable_size
-    variable_angle = random.randrange(20, 50)
-    angle = variable_angle
-    colors= ['red', 'orange', 'green']
-    color = random.randrange(3)
-    line_color = colors[color]
-    t.color(line_color)
-    if depth == 0:
-        t.fd(size)
-        t.bk(size)
-    else:
-        t.fd(size)
-        t.rt(angle)
-        tree(t, depth-1, size, angle)
-        t.lt(2 * angle)
-        tree(t, depth-1, size, angle)
-        t.rt(angle)
-        t.bk(size)</p>
+   <p>def tree(t, depth, size, angle):</p>
+    <p>variable_size = random.randrange(50, 100)</p>
+    <p>size = variable_size</p>
+    <p>variable_angle = random.randrange(20, 50)</p>
+    <p>angle = variable_angle</p>
+    <p>colors= ['red', 'orange', 'green']</p>
+    <p>color = random.randrange(3)</p>
+    <p>line_color = colors[color]</p>
+    <p>t.color(line_color)</p>
+    <p>if depth == 0:</p>
+        <p>t.fd(size)</p>
+        <p>t.bk(size)</p>
+    <p>else:</p>
+        <p>t.fd(size)</p>
+        <p>t.rt(angle)</p>
+        <p>tree(t, depth-1, size, angle)</p>
+        <p>t.lt(2 * angle)</p>
+        <p>tree(t, depth-1, size, angle)</p>
+        <p>t.rt(angle)</p>
+        <p>t.bk(size)</p>
 
