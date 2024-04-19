@@ -42,5 +42,54 @@ t.pd()
 window.exitonclick()
 
 
+import turtle
+import random
+window = turtle.Screen()
+window.setup(900, 600)
+
+def triangle(t, size):
+    t.lt(60)
+    t.fd(size)
+    t.rt(120)
+    t.fd(size)
+    t.rt(120)
+    t.fd(size)
+    t.rt(180)
+
+def sierpinski(t, depth, size, scale_factor=1):
+    color = random.randrange(4)
+    colors = ['red', 'orange', 'green', 'blue']
+    t.color(colors[color])
+    random_size = random.randrange(50, 300)
+    size = random_size
+    
+    if depth == 1:
+        triangle(t, size)
+    else:
+    
+        sierpinski(t, depth-1, size/2)
+        t.fd(size/2)
+        sierpinski(t, depth-1, size/2)
+        t.bk(size/2)
+        t.lt(60)
+        t.fd(size/2)
+        t.rt(60)
+        sierpinski(t, depth-1, size/2)
+        t.rt(120)
+        t.fd(size/2)
+        t.lt(120)
+
+michelangelo = turtle.Turtle()
+michelangelo.pu()
+michelangelo.speed(0)
+michelangelo.goto(-295, 0)
+michelangelo.pd()
+sierpinski(michelangelo, 5, 'size')
+
+window.exitonclick()
+
+
+
+
 
 
