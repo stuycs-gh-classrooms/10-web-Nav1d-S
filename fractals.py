@@ -89,6 +89,40 @@ sierpinski(michelangelo, 5, 'size')
 window.exitonclick()
 
 
+import turtle
+import random
+window = turtle.Screen()
+window.setup(600, 600)
+
+def tree(t, depth, size, angle):
+    variable_size = random.randrange(50, 100)
+    size = variable_size
+    variable_angle = random.randrange(20, 50)
+    angle = variable_angle
+    colors= ['red', 'orange', 'green']
+    color = random.randrange(3)
+    line_color = colors[color]
+    t.color(line_color)
+    if depth == 0:
+        t.fd(size)
+        t.bk(size)
+    else:
+        t.fd(size)
+        t.rt(angle)
+        tree(t, depth-1, size, angle)
+        t.lt(2 * angle)
+        tree(t, depth-1, size, angle)
+        t.rt(angle)
+        t.bk(size)
+
+
+leonardo = turtle.Turtle()
+leonardo.lt(90)
+leonardo.pd()
+tree(leonardo, 6, 'size', 'angle')
+
+window.exitonclick()
+
 
 
 
