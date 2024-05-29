@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import random 
-random_number = random.randint(1, 100)
+from random import random 
 print('Content-type: text/html\n')
-print('Hello', random_number)
+a = 'number is' + str(random())
+print(a)
